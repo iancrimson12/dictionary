@@ -30,32 +30,44 @@
     .form-group{
       padding:5px;
     }
-
     </style>
+
   </head>
 
-  <body>
-    <div class="container screen-center text-center">
+  <main>
+    <body>
+      <!-- Start of Page Here -->
+      <div class="container screen-center text-center">
+
         <h1 class="h2 mb-3 font-weight-normal head-text">Dictionary</h1>
-      <form class="form-signin form-inline">
-       <!--  <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
-       <div class="form-group">
-         <label for="inputWord" class="sr-only">Email address</label>
-         <input type="email" id="inputWord" class="d-inline form-control" placeholder="Enter a word" required>
-       </div>
-       <div class="form-group">
-          <button class="d-inline btn btn-md btn-primary btn-block" type="submit">Search</button>
+        <form class="form-signin form-inline">
+         <!--  <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
+         <div class="form-group">
+           <label for="inputWord" class="sr-only">Email address</label>
+           <input type="text" id="inputWord" class="d-inline form-control" placeholder="Enter a word" required>
+         </div>
+         <div class="form-group">
+            <button class="d-inline btn btn-md btn-primary btn-block" id="search-btn" type="submit">Search</button>
+          </div>
+        </form>
+
+
+        <div id="word-result-box" style="padding:50px;">
+          <h2>
+            <span id="word-searched" >  </span>
+          </h2>
+          <p>
+            <span id="word-definition">   </span>
+          </p>
         </div>
-      </form>
 
+     </div>
+      <!-- End of Page Here -->
 
-      <div class="word-result-box" style="padding:50px;">
-        <h2><span id="word-searched" > Hello </span></h2>
-        <p>
-          <span id="word-definition"> used as a greeting or to begin a phone conversation. </span>
-        </p>
-      </div>
+      <!-- Script Starts Here -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="script.js"></script>
 
-    </div>
-  </body>
+    </body>
+  </main>
 </html>
