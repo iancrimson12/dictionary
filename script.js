@@ -27,11 +27,12 @@ function dictionaryApi(){
          let jsonData = JSON.parse(data);
          console.log(jsonData);
          if(jsonData.title){
-           $('#word-searched').text("We couldn't find a definition of"+ seachVal);
+           $('#word-searched').text("We couldn't find a definition of "+ seachVal);
          }else {
            $('#word-searched').text(jsonData[0].word);
            $('#word-definition').text(jsonData[0].meanings[0].definitions[0].definition);
          }
+
      }
 
    });
